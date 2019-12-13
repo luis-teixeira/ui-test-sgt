@@ -1,0 +1,19 @@
+<div class="user ">
+
+    <div class="row align-items-center">
+        <div class="col">
+            <span *ngIf="!userData.editing">{{ userData.name }}</span>
+            <input *ngIf="userData.editing" class="form-control" type="text" [(ngModel)]="name" (keyup)="saveData()">
+        </div>
+        <div class="col align-self-end text-right">
+            <div *ngIf="!userData.editing">
+                <button class="btn btn-sm btn-primary mr-2" (click)="editUser(id)">edit</button>
+                <button class="btn btn-sm btn-danger" (click)="deleteUser(id)">delete</button>
+            </div>
+            <div *ngIf="userData.editing">
+                <button class="btn btn-sm btn-primary ml-2" (click)="saveData(id)">save</button>
+            </div>
+        </div>
+    </div>
+
+</div>

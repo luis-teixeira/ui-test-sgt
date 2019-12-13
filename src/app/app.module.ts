@@ -1,6 +1,8 @@
+import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,15 +14,28 @@ import { environment } from '../environments/environment'; // Angular CLI enviro
 import { EffectsModule } from '@ngrx/effects';
 import { UsersEffects } from '../app/store/effects/users.effects';
 import { UsersService } from '../app/services/users.service';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { UsersComponent } from './components/users/users.component';
+import { UserComponent } from './components/user/user.component';
+import { AddUsersComponent } from './components/add-users/add-users.component';
+import { ExtraToolsComponent } from './components/extra-tools/extra-tools.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    UsersComponent,
+    UserComponent,
+    AddUsersComponent,
+    ExtraToolsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     StoreModule.forRoot(reducers, {
       metaReducers,
       runtimeChecks: {

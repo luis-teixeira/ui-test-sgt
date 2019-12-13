@@ -1,0 +1,12 @@
+<div class="add-user mt-3">
+    <div class="row align-items-center">
+        <div class="col-4">
+            <small *ngIf="error" class="text-danger">please add at least 1 character</small>
+            <input class="form-control" type="text" [(ngModel)]="name">
+
+        </div>
+        <div class="col pl-0">
+            <button class="btn btn-primary " (click)="saveData()" >add user</button>
+        </div>
+    </div>
+</div>

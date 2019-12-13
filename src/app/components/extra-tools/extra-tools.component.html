@@ -1,0 +1,12 @@
+
+<div *ngIf="(getUsers$ | async)?.length > 0" class="add-user mt-3">
+    <div class="row align-items-center">
+        <div *ngIf="!(editAll$ | async)" class="col">
+            <button class="btn btn-primary " (click)="editAllUser()">edit all user</button>
+            <button class="btn btn-danger ml-2" (click)="deleteAllData()">delete all user</button>
+        </div>
+        <div *ngIf="editAll$ | async" class="col">
+            <button class="btn btn-primary " (click)="saveAllData()">save all user</button>
+        </div>
+    </div>
+</div>

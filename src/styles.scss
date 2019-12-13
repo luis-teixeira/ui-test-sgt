@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import './assets/variables';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.content {
+    display: flex;
+    margin: auto;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    min-height: calc( 100vh - 100px);
+    padding-top: $base-height-header;
+}

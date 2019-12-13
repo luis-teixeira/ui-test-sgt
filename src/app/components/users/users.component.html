@@ -1,0 +1,7 @@
+<div class="container mb-3">
+    <app-add-users></app-add-users>
+    <app-extra-tools></app-extra-tools>
+    <div class="users mt-3">
+        <app-user *ngFor="let user of this.users$ | async; index as i" [userData]=user [id]=i></app-user>
+    </div>
+</div>
